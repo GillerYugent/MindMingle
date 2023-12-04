@@ -1,11 +1,6 @@
 from fastapi import FastAPI
-import os
+from core.router import router
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-if __name__ == "__main__":
-    os.system('uvicorn backend.main:app')
+app.include_router(router,prefix='/api')
