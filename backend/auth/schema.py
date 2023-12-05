@@ -1,7 +1,7 @@
 from pydantic import BaseModel, EmailStr
-from typing import List, Optional
-from backend.core.schema import Default
-
+from typing import Optional, Union
+from core.schema import Default
+import typing
 #Класс для опыта
 class Experience(BaseModel):
     role:str
@@ -24,8 +24,8 @@ class UserCreate(BaseModel):
     password: str
     description: str
     status: bool
-    skills = Optional[List[Skills]] = None
-    experience = Optional[list[Experience]] = None
+    skills: Union[typing.List[Skills], None] = None
+    experience: Union[typing.List[Experience], None] = None
     is_active: bool = True
     is_superuser: bool = False
     is_verified: bool = False
