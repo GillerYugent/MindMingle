@@ -12,6 +12,23 @@ class ExperiencCreate(BaseModel):
 class Experience(ExperiencCreate, Default):
     pass
 
+class ExperienceDelete(BaseModel):
+    id:int
+
+#Класс для образования
+class EducationCreate(BaseModel):
+    name:str
+    user_id:int
+    #Сделать лет образования, название направления и всё остальное, что нужно дя описания универа
+    description: Optional[str] = None
+    id_end:bool
+
+class Education(EducationCreate, Default):
+    pass
+
+class EducationDelete(BaseModel):
+    id:int
+
 #Класс для навыков
 class SkillCreate(BaseModel):
     user_id:int
@@ -21,6 +38,9 @@ class SkillCreate(BaseModel):
 
 class Skill(SkillCreate, Default):
     pass
+
+class SkillDelete(BaseModel):
+    id:int
 
 #Классы для пользователей
 class UserCreate(BaseModel):

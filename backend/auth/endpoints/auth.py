@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from auth.schema import User, UserCreate, UserDelete
+
 router = APIRouter()
 
 @router.get('/', response_model=list[User])
