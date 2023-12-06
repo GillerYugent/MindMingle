@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from startups.schema import StartUp, StartUp_Delete, StartUp_Create
 router = APIRouter()
 
-@router.get('/',response_model=StartUp)
+@router.get('/',response_model=list[StartUp])
 async def startup_get() ->list[StartUp]:
     pass
 

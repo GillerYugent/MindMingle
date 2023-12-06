@@ -1,18 +1,26 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional, Union
+from typing import Optional, List
 from core.schema import Default
-import typing
+
 #Класс для опыта
-class Experience(BaseModel):
+class ExperiencCreate(BaseModel):
+    user_id:int
     role:str
     company:str
     description: Optional[str] = None
 
+class Experience(ExperiencCreate, Default):
+    pass
+
 #Класс для навыков
-class Skills(BaseModel):
+class SkillCreate(BaseModel):
+    user_id:int
     name: str
     level: str
     description: Optional[str] = None
+
+class Skill(SkillCreate, Default):
+    pass
 
 #Классы для пользователей
 class UserCreate(BaseModel):
@@ -24,8 +32,6 @@ class UserCreate(BaseModel):
     password: str
     description: str
     status: bool
-    skills: Union[typing.List[Skills], None] = None
-    experience: Union[typing.List[Experience], None] = None
     is_active: bool = True
     is_superuser: bool = False
     is_verified: bool = False
@@ -35,4 +41,3 @@ class User(UserCreate,Default):
 
 class UserDelete(BaseModel):
     id:int
-

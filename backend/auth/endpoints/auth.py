@@ -1,10 +1,9 @@
 from fastapi import APIRouter
 from auth.schema import User, UserCreate, UserDelete
-from types import List
-router = APIRouter
+router = APIRouter()
 
-@router.get('/',response_model=List[User])
-async def user_get() -> List[User]:
+@router.get('/', response_model=list[User])
+async def user_get() -> list[User]:
     pass
 
 @router.get('/{user_id}',response_model=User)
