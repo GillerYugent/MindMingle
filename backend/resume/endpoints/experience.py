@@ -3,6 +3,6 @@
 #       
 
 from fastapi import APIRouter
-from auth.schema import Education, EducationCreate, EducationDelete
+from resume.schema import ExperiencCreate, Experience, ExperienceDelete
 
 router = APIRouter()

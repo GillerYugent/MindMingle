@@ -3,7 +3,7 @@
 #       
 
 from fastapi import APIRouter
-from auth.schema import Skill, SkillCreate, SkillDelete
+from resume.schema import Skill, SkillCreate, SkillDelete
 
 router = APIRouter()
 
