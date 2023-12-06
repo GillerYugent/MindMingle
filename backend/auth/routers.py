@@ -1,3 +1,7 @@
+#
+#       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#       
+
 from fastapi import APIRouter
 from auth.endpoints.auth import router as auth_router
 from auth.endpoints.education import router as education_router

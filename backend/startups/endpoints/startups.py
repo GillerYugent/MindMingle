@@ -1,3 +1,8 @@
+#
+#       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#       
+
+
 from fastapi import APIRouter
 from startups.schema import StartUp, StartUp_Delete, StartUp_Create
 router = APIRouter()

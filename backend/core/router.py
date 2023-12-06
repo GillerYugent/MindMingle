@@ -1,3 +1,7 @@
+#
+#       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#
+       
 from fastapi import APIRouter
 from startups.routers import router as startup_router
 from auth.routers import router as user_router

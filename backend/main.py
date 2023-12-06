@@ -1,3 +1,7 @@
+#
+#       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#     
+
 from fastapi import FastAPI
 from core.router import router
 

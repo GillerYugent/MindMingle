@@ -13,6 +13,7 @@ class StartUp_Create(BaseModel):
     is_premium:bool
     stack: List[str]
     logo: bytes
+    language:str
     photo_list: Optional[List[bytes]] = None
 
 class StartUp(StartUp_Create,Default):

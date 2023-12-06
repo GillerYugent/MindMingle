@@ -1,3 +1,7 @@
+#
+#       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#       
+
 from pydantic import BaseModel, EmailStr
 from typing import Optional, List
 from core.schema import Default
