@@ -9,11 +9,6 @@ class ResumeCreate(BaseModel):
     user_id:int
     #Доработать схему, так как мне сейчас лень
 
-
-
-
-
-
 #Класс для опыта
 class ExperiencCreate(BaseModel):
     user_id:int
@@ -31,7 +26,9 @@ class ExperienceDelete(BaseModel):
 class EducationCreate(BaseModel):
     name:str
     user_id:int
-    #Сделать лет образования, название направления и всё остальное, что нужно дя описания универа
+    years: int
+    direction: str
+    #Сделать всё остальное, что нужно дя описания универа
     description: Optional[str] = None
     id_end:bool
 

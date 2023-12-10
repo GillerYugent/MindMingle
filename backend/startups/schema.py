@@ -1,6 +1,6 @@
 #
-#
 #       CREATED BY MAXIM SHESTAKOV: LYMOOS
+#       
 
 from pydantic import BaseModel
 from core.schema import Default
@@ -8,7 +8,7 @@ from typing import List, Optional
 
 class StartUp_Create(BaseModel):
     title:str
-    discription: str | None = None
+    description: str | None = None
     owner_id:int
     is_premium:bool
     stack: List[str]
