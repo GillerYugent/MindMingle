@@ -42,8 +42,6 @@ class EducationDelete(BaseModel):
 class SkillCreate(BaseModel):
     user_id:int
     name: str
-    level: str
-    description: Optional[str] = None
 
 class Skill(SkillCreate, Default):
     pass
