@@ -9,6 +9,13 @@ class ResumeCreate(BaseModel):
     user_id:int
     #Доработать схему, так как мне сейчас лень
 
+
+class Resume(ResumeCreate,Default):
+    id:int
+
+class ResumeDelete(BaseModel):
+    id:int
+
 #Класс для опыта
 class ExperiencCreate(BaseModel):
     user_id:int
