@@ -5,7 +5,7 @@
 from pydantic import BaseModel
 from core.schema import Default
 from typing import List, Optional
-
+from uuid import UUID
 class StartUp_Create(BaseModel):
     title:str
     description: str | None = None
@@ -21,4 +21,4 @@ class StartUp(StartUp_Create,Default):
     memberlist: Optional[List[int]] = None #id разработчиков, участвующих в стартапе
 
 class StartUp_Delete(BaseModel):
-    id:int
+    id:UUID
