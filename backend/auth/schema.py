@@ -19,6 +19,7 @@ class UserCreate(BaseModel):
     is_active:bool = Field(default=False)
     is_superuser: bool = Field(default=False)
     is_verified: bool = Field(default=False)
+    permishions:list[str]
 
 class User(UserCreate,Default):
     pass

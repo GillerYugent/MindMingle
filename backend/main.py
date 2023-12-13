@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.on_event("startup")
 async def root():
-    return {"START WORKING!"}
+    return {"connection": "START WORKING!"}
 
 
 app.include_router(router,prefix='/api')
