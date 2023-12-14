@@ -10,7 +10,7 @@ app = FastAPI()
 @app.on_event("startup")
 async def root():
     return {"connection": "START WORKING!"}
-
+    #запуск базы данных, да и всеё системы впринципе
 
 app.include_router(router,prefix='/api')
 

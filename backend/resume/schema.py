@@ -11,7 +11,7 @@ class ResumeCreate(BaseModel):
     
 
 class Resume(ResumeCreate,Default):
-    id:UUID
+    pass
 
 class ResumeDelete(BaseModel):
     id:UUID
