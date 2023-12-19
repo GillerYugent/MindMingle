@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from core.schema import Default
 from typing import Optional
 from uuid import UUID
-
+from datetime import datetime
 
 class Schedule_Create(BaseModel):
     title:str
@@ -20,7 +20,9 @@ class Schedule_Delete(BaseModel):
 class TaskCreate(BaseModel):
     title:str
     description:Optional[str]=None
-    owner_id:UUID
+    schedule_id:UUID
+    task_creater = UUID
+    deadline:Optional[datetime] = None
     status:int = Field(default=0)
     worker: Optional[UUID]=None
 
@@ -29,3 +31,5 @@ class Task(TaskCreate, Default):
 
 class TaskDelete(BaseModel):
     id:UUID
+
+
