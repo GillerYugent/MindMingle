@@ -11,7 +11,7 @@ async def task_get(shedule_id:UUID)->list[Task]:
 async def task_get_by_id(task_id:UUID) ->Task:
     pass
 
-@router.put('/',response_model=Task)
+@router.post('/',response_model=Task)
 async def task_create(task:TaskCreate)->Task:
     pass
 
