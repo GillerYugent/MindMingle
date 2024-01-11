@@ -15,7 +15,7 @@ class UserCreate(BaseModel):
     phone: Optional[str]=None #Должно быть не обязательно
     password: str
     description: Optional[str] = None #Должно быть не обязательным
-    status: bool = Field(default=-1)#0 - работник 1-стартапер (-1)-еще не определенно
+    status: int = Field(default=-1)#0 - работник 1-стартапер (-1)-еще не определенно
     is_active:bool = Field(default=False)
     is_superuser: bool = Field(default=False)
     is_verified: bool = Field(default=False)
